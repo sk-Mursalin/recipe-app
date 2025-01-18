@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #2b1d0f;
+}
+header{
+    background-color: rgba(0, 0, 0, 0.582);
+    padding: 15px;
+    color: #fff;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form{
+    display: flex;
+    align-items: center;
+}
+.search-box{
+    flex-grow: 1;
+    margin-right: 10px;
+}
+.search-box , .btn{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn{
+    background-color: #f44336;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-container{
+    max-width: 1100px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 10px;
+    padding: 20px;
+}
+.card-container h2{
+    text-align: center;
+    color: #fff;
+}
+.card{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.582);
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 10px;
+    max-width: 250px;
+}
+.img{
+    border-radius: 15px;
+    height: 180px;
+    padding: 10px;
+}
+.recipe-btn{
+    border: none;
+    padding-block: 8px;
+    padding-inline: 18px;
+    background-color: #f44336;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cross{
+    cursor: pointer;
+}
+.pop-up--container{
+    background-color: #694c2f;
+    position: fixed;
+    height: 40vh;
+    width: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+    display: none;
+    overflow-y: scroll;
+    padding: 10px;
+    color: #fff;
+}
+.pop-up--container::-webkit-scrollbar{
+    width: 5px;
+}
+.pop-up--container::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 10px;
+    
+}
+.visible{
+    display: block;
+}
+
+@media(max-width:578px){
+    .nav-bar{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    form{
+        width: 100%;
+    }
+    
+}
+@media(max-width:272px){
+    form{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn{
+        padding-inline: 20px;
+    }
+}
+
